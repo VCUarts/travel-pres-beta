@@ -1,0 +1,1516 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>VCUarts - Presentation</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+
+<!-- styles to be imported when I move this to the version at VCU -->
+<style>
+
+.vcuartslogo{
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	z-index: 1000000;
+}
+
+.reveal ul.images-inline{
+	list-style: none;
+	margin-left: 0;
+}
+
+.images-inline li{
+	float: left;
+	margin-right: 20px;
+	width: 200px;
+	text-align: center;
+}
+
+.images-inline li:last-child{
+	margin-right: 0;
+}
+
+.reveal img.no-border{
+	border: none;
+	/*border: 4px solid #eeeeee;*/
+	box-shadow: none;
+	background: transparent;
+}
+
+/*.image-inline li small{
+	display: block;
+}*/
+
+span.big-callout{
+	color: #ee3041;
+	font-size: 2em;
+}
+
+span.red {
+  color: #ee3041;
+}
+
+span.inline-callout{
+	color: #00ABC4;
+}
+
+
+.reveal .vcuarts .vcu{
+	text-transform: uppercase;
+}
+
+.reveal .vcuarts .arts{
+	text-transform: lowercase;
+}
+
+.reveal .lowercase{
+	text-transform: lowercase;
+}
+
+
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, .reveal p {
+	text-shadow: 0px 0px 6px rgba(0, 0, 0, 1.0);
+}
+
+.reveal h1.no-text, .reveal h2.no-text, .reveal h3.no-text, .reveal h4.no-text, .reveal h5.no-text, .reveal h6.no-text, .reveal p.no-text {
+	text-shadow: none;
+}
+
+.images-inline .name{
+	margin-bottom: 1em;
+}
+
+.reveal {
+	font-family: 'Conv_Archer-Medium-Pro';
+}
+
+.reveal .slides>section>section{
+	background-color:rgba(0,0,0,0.5);
+	border-radius: 10px;
+	padding: 20px 30px 10px 30px;
+	box-shadow: 0px 0px 20px rgba(0,0,0,.7);
+	border: 1px solid rgba(0,0,0,.1);
+}
+
+.reveal .slides>section>section.nbg{
+	background-color: transparent;
+	border-radius: 0;
+	padding: 20px 30px 10px 30px;
+	box-shadow: none;
+	border: none;
+}
+
+.reveal .col-onehalf{
+	width: 45%;
+	float: left;
+	padding: 2%;
+}
+
+.col-onehalf.last{
+	float: right;
+}
+
+
+.reveal .col-onethird{
+	width: 29%;
+	float: left;
+	padding: 2%;
+}
+
+.col-onethird.last{
+	float: right;
+}
+
+
+.reveal .majors-list small{
+	font-size: .8em;
+}
+
+
+
+
+
+
+
+
+.reveal p{
+	margin: 10px 0;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6{
+	margin: 20px 0;
+}
+
+.reveal h2{
+	letter-spacing: .06em;
+	font-size: 2.75em;
+	line-height: 1.05em;
+}
+
+.reveal table th,
+.reveal table td{
+	padding: 5px;
+}
+
+table .even{
+	background-color:rgba(0,0,0,0.5);
+}
+
+table .row-1{
+	background-color:rgba(0,0,0,0.5);
+}
+
+
+.reveal .biglist small{
+	line-height: 1.8em;
+}
+
+.reveal .slides>section>section.biglist{
+	background-color:rgba(0,0,0,0.75);
+	border-radius: 10px;
+	padding: 20px 30px 10px 30px;
+	box-shadow: 0px 0px 20px rgba(0,0,0,.7);
+	border: 1px solid rgba(0,0,0,.1);
+}
+
+
+
+
+
+/*quicklinks*/
+.quicklinks{
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	z-index: 100;
+}
+
+.quicklinks img{
+	cursor: pointer;
+}
+
+.quicklinks ul{
+	display: none;
+	list-style-type: none;
+	font-size: .6em;
+	line-height: 1.2em;
+	background-color:rgba(0,0,0,0.5);
+	border-radius: 10px;
+	padding: 20px 30px 20px 30px;
+	box-shadow: 0px 0px 20px rgba(0,0,0,.7);
+	border: 1px solid rgba(0,0,0,.1);
+}
+
+.quicklinks ul li{
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+
+
+
+
+
+
+
+@font-face {
+	font-family: 'Conv_Archer-Medium-Pro';
+	src: url('assets/fonts/Archer-Medium-Pro.eot');
+	src: local('☺'), url('assets/fonts/Archer-Medium-Pro.woff') format('woff'), url('assets/fonts/Archer-Medium-Pro.ttf') format('truetype'), url('assets/fonts/Archer-Medium-Pro.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				
+<!--
+------------------------------ 
+INTRODUCTION 
+------------------------------
+-->
+
+
+				<section data-background="assets/images/afo/afo.jpg">
+					<section>
+						<h3 style="color:#febe10">Hello, we're</h3>
+						<h1>Virginia Commonwealth University <br/>School of the Arts.</h1>
+					</section>
+
+					<section>
+						<img class='no-border' src="assets/images/vcuarts-logo.png"/>
+						<h3 class="fragment no-text-shadow" >Nice to meet you.</h3>
+					</section>
+
+					<section 
+						data-background="assets/images/rva-night-skyline.jpg"
+						data-background-transition="fade">
+						
+						<h2>Located in <br/>Richmond, Virginia</h2>
+					</section>
+
+					<!-- style="background: rgba(0,0,0,0.2)" -->
+					<section 
+						data-background="assets/images/qatar2.jpg"
+						data-background-transition="fade">
+						<h2>Branch campus in Doha, Qatar</h2>
+					</section>
+
+					<section 
+						data-background="assets/images/vcuarts-sticker-rome.jpg"
+						data-background-transition="fade">
+						
+						<h2>Connections all over<br/> the world</h2>
+					</section>
+				</section>
+
+
+
+
+<!--
+------------------------------ 
+International Students
+------------------------------
+-->
+				<section>
+					<section class="nbg" data-background="assets/images/misc/capsquilt.jpg">
+						<img class="no-border" src="assets/images/graphics/states-countries.png"/>
+					</section>
+				</section>
+
+
+
+<!--
+------------------------------ 
+Rankings
+------------------------------
+-->
+				<section data-background="assets/images/richmond/dogsandducks.png">
+					<section>
+						<h2><span class="vcuarts"><span class="vcu">VCU</span><span class="arts">arts</span></span> is the <span class="big-callout">#1</span> ranked public art and design program in the country.</h2>
+						<p>So says <em>US News &amp; World Report</em> (since 2003)</p>
+					</section>
+
+					<section>
+            <h2>and we're ranked #2 in the nation among both public and private schools</h2>
+						<table>
+						<tbody>
+							<tr class="row-2 even">
+								<td class="column-1">#1</td><td class="column-2">Yale University</td></td>
+							</tr>
+							<tr class="row-3 odd">
+								<td class="column-1">#2</td><td class="column-2"><span class="red">VCUarts</span></td></td>
+							</tr>
+							<tr class="row-4 even">
+								<td class="column-1">#2 (tie) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td><td class="column-2">University of California - Los Angeles &nbsp;&nbsp;</td></td>
+							</tr>
+							<tr class="row-5 odd">
+								<td class="column-1">#4</td><td class="column-2">Rhode Island School of Design</td></td>
+							</tr>
+							<tr class="row-6 even">
+								<td class="column-1">#4 (tie)</td><td class="column-2">School of the Art Institute of Chicago</td></td>
+							</tr>
+						</tbody>
+						</table>
+
+
+					</section>
+
+					<section data-background="assets/images/misc/dog.jpg">
+						<h2>But our ranking is <br/> just part of the story.</h2>
+					</section>
+				</section>
+
+<!--
+------------------------------ 
+Value
+------------------------------
+-->
+
+				<section>
+					<section data-background="assets/images/money2.jpg">
+						<h2><span class="vcuarts"><span class="vcu">VCU</span><span class="arts">arts</span></span> is an amazing VALUE.</h2>
+					</section>
+
+					<section data-background="assets/images/money2.jpg">
+						<p>Our relatively <span class="inline-callout">low tuition</span></p>
+						<p class="fragment">and <span class="inline-callout">financial aid assistance</span></p>
+						
+
+						<p class="fragment">combined with the <span class="inline-callout">quality</span> of a <span class="vcuarts"><span class="vcu">VCU</span><span class="arts">arts</span></span> education <br/> and the <span class="inline-callout">reputation</span> and <span class="inline-callout">ranking</span> of <span class="vcuarts"><span class="vcu">VCU</span><span class="arts">arts</span></span> </p>
+
+						<h2 class="fragment">=</h2>
+					</section>
+
+					<section class="nbg" data-background="assets/images/richmond/dunk.jpg">	
+						<h2>awesome.</h2>
+						<p class="fragment"><span class="inline-callout">(value)</span></p>
+					</section>
+				</section>
+
+
+<!--
+------------------------------ 
+Richmond
+------------------------------
+-->
+
+				<section>
+					<section data-background="assets/images/richmond/rva-night.jpg">
+						<h2>Richmond is an <br/>incredible city with a <br/>low cost-of-living.</h2>
+					</section>
+
+					<section data-background="assets/images/richmond/rva-night.jpg">
+						<h2>it is...</h2>
+					</section>
+
+					<section data-background="assets/images/fall.jpg">
+						<h2>Beautiful.</h2>
+					</section>
+
+					<section data-background="assets/images/pollak-roof.jpg">
+						<h2>Inspiring.</h2>
+					</section>
+					
+					<section data-background="assets/images/vmfa_exterior.jpg">
+						<h2>Arts-centric.</h2>
+					</section>
+					
+					
+					<section data-background="assets/images/carytown-vintage.jpg">
+						<h2>There's Always something cool to do and see.</h2>
+					</section>
+				</section>
+
+
+
+
+<!--
+------------------------------ 
+Richmond
+------------------------------
+-->
+
+				<section>
+					<section data-background="assets/images/misc/ica.jpg">
+						<h2>VCU Institute for Contemporary Art</h2>
+						<p></p>
+					</section>
+				</section>
+
+
+<!--
+------------------------------ 
+Did You Know?
+------------------------------
+-->
+
+				<section>
+					<section data-background="assets/images/richmond/churchhill.jpg">
+						<h2>Richmond is...</h2>
+					</section>
+
+					<section data-background="assets/images/richmond/rivercityraft.com/rapids2.jpg">
+						<h2>Outdoor Magazine's <br/>#1 River City</h2>
+					</section>
+
+					<section data-background="assets/images/richmond/rva-tattoo.jpg">
+						<h2>the Third most tattooed <br/>city in the U.S.</h2>
+					</section>
+
+					<section data-background="assets/images/richmond/apples2.jpg">
+						<h2>One of 8 under the radar foodie cities in the world</h2>
+						<p>As ranked by U.S. News Travel</p>
+					</section>
+
+					<section data-background="assets/images/richmond/rvamoon.jpg">
+						<h2>One of 10 best cities for finding employment</h2>
+						<p>According to Forbes</p>
+					</section>
+
+					<section data-background="assets/images/richmond/vabeach.jpg">
+						<h2>Near everything you'd want</h2>
+						<img style="max-width: 600px;" src="assets/images/richmond/proximity2.png" />
+					</section>
+
+<!-- MAYBE THIS SHOULD GO AT THE END. NEED TO GET TO MEAT SOONER? POTATOES LATER? -->
+				</section>
+
+
+
+
+
+<!--
+------------------------------ 
+Back to VCU
+------------------------------
+-->
+
+				<section>
+					<!-- <section data-background="assets/images/glassworking_1.jpg"> -->
+					<section data-background="assets/images/richmond/engbldg.jpg">
+						<h2>VCU is a major public research institution</h2>
+					</section>
+
+					<section class="biglist" data-background="assets/images/misc/doors.jpg">
+						<small>Accounting | African American Studies | Anthropology | <span class="inline-callout">Art Education</span> | <span class="inline-callout">Art History</span> | Bioinformatics | Biology | Biomedical Engineering | Business | Chemical and Life Science Engineering | Chemistry | <span class="inline-callout">Cinema</span> | Clinical Laboratory Sciences | Clinical Radiation Sciences | <span class="inline-callout">Communication Arts</span> | Computer Engineering | Computer Science | <span class="inline-callout">Craft/Material Studies</span> | Criminal Justice | <span class="inline-callout">Dance and Choreography</span> | Dental Hygiene | Early and Elementary Education | Economics | Electrical Engineering | English | Environmental Studies | <span class="inline-callout">Fashion Design</span> | <span class="inline-callout">Fashion Merchandising</span> | Financial Technology | Foreign Language | Forensic Science | Gender, Sexuality and Women’s Studies | <span class="inline-callout">Graphic Design</span> | Health, Physical Education and Exercise Science | History | Homeland Security and Emergency Preparedness | Information Systems | Interdisciplinary Studies | <span class="inline-callout">Interior Design</span> | International Studies | <span class="inline-callout">Kinetic Imaging</span> | Marketing | Mass Communications | Mathematical Sciences | Mechanical Engineering | <span class="inline-callout">Music</span> | Nursing | <span class="inline-callout">Painting + Printmaking</span> | Philosophy | <span class="inline-callout">Photography + Film</span> | Physics | Political Science | Psychology | Real Estate | Religious Studies | Science | <span class="inline-callout">Sculpture + Extended Media</span> | Social Work | Sociology | <span class="inline-callout">Theatre</span> | Urban and Regional Studies</small>
+					</section>
+
+					<section class="nbg" data-background="assets/images/richmond/vcu-rams-crowd.jpg">
+						<img class="no-border" src="assets/images/graphics/vcu-pop.png" />
+					</section>
+					
+					<section class="nbg" data-background="assets/images/npd.jpg">
+						<img class="no-border" src="assets/images/graphics/vcuarts-pop.png" />
+					</section>
+					
+					<section class="nbg" data-background="assets/images/richmond/gdes-dept.jpg">
+						<img class="no-border" src="assets/images/graphics/vcuarts-dep.png" />
+					</section>
+					
+					<section class="nbg" data-background="assets/images/richmond/vcuarts-class-2.jpg">
+						<img class="no-border" src="assets/images/graphics/vcuarts-class.png" />
+					</section>
+					
+					<section class="nbg" data-background="assets/images/bigops.png">
+						<img class="no-border" src="assets/images/graphics/big-small.png" />
+					</section>
+
+					<!-- <section>
+						<h3>University Benefits</h3>	
+						<video width="946" height="540" controls poster="assets/videos/posters/poster.png">
+						  <source src="assets/videos/08_UniversityStudent.mp4" type="video/mp4">
+						</video>
+					</section> -->
+
+				</section>
+
+
+
+<!--
+------------------------------ 
+Majors
+------------------------------
+-->
+				<section class="nbg" data-background="assets/images/misc/gradbanners.jpg">
+					<section>
+						<h2>Now let's talk <br/>about our majors</h2>
+					</section>
+					
+					<section class="majors-list biglist">
+
+						<div class="col-onehalf">
+							<h4>BA Programs</h4>
+							<p><small><a href="#/19">Art History</a></small></p>
+							<p><small><a href="#/20">Cinema</a></small></p>
+							<p><small><a href="#/21">Fashion Merchandising</a></small></p>
+							<br/>
+							<h4>Performing Arts</h4>
+							<p><small><a href="#/22">Dance + Choreography / BFA</a></small></p>
+							<p><small><a href="#/23">Music / BA, BM</a></small></p>
+							<p><small><a href="#/24">Theatre / BFA, BA</a></small></p>
+						</div>
+
+						<div class="col-onehalf last">
+							<h4>Visual Arts & Design BFA Programs</h4>
+							<p><small><a href="#/9">Art Education</a></small></p>
+							<p><small><a href="#/10">Communication Arts</a></small></p>
+							<p><small><a href="#/11">Craft/Material Studies</a></small></p>
+							<p><small><a href="#/12">Fashion Design</a></small></p>
+							<p><small><a href="#/13">Graphic Design</a></small></p>
+							<p><small><a href="#/14">Interior Design</a></small></p>
+							<p><small><a href="#/15">Kinetic Imaging</a></small></p>		
+							<p><small><a href="#/16">Painting + Printmaking</a></small></p>
+							<p><small><a href="#/17">Photography + Film</a></small></p>
+							<p><small><a href="#/18">Sculpture + Extended Media</a></small></p>
+						</div>
+					</section>
+
+						<section data-background="assets/images/afo/squirrell.jpg">
+		<h3>These majors start with AFO</h3>
+		<p><a href="#/10">Art Education</a></p>
+		<p><a href="#/13">Communication Arts</a></p>
+		<p><a href="#/14">Craft/Material Studies</a></p>
+		<p><a href="#/16">Fashion Design</a></p>
+		<p><a href="#/18">Graphic Design</a></p>
+		<p><a href="#/19">Interior Design</a></p>
+		<p><a href="#/20">Kinetic Imaging</a></p>		
+		<p><a href="#/22">Painting + Printmaking</a></p>
+		<p><a href="#/23">Photography + Film</a></p>
+		<p><a href="#/24">Sculpture + Extended Media</a></p>
+	</section>
+
+	<section data-background="assets/images/afo/init.jpg">
+		<h2>What is AFO?</h2>
+	</section>
+
+	<section data-background="assets/images/afo/happybirthday.jpg">
+		<h2>Art Foundation</h2>
+		<p>A studio-based experience in the fundamental issues of art and design. It exposes students to a vast forum of ideas &amp; concepts preparing them for a wide range of disciplines.</p>
+	</section>
+
+	<section data-background="assets/images/afo/drawing.jpg">
+		<h2>Drawing</h2>
+	</section>
+
+	<section data-background="assets/images/afo/surface3.jpg">
+		<h2>Surface</h2>
+	</section>
+
+	<section data-background="assets/images/afo/space2.jpg">
+		<h2>Space</h2>
+	</section>
+
+	<section data-background="assets/images/afo/horses-horses.jpg">
+		<h2>Time</h2>
+	</section>
+
+	<!-- <section>
+		<video width="946" height="540" controls poster="assets/videos/posters/poster.png">
+		  <source src="assets/videos/01_AFO.mp4" type="video/mp4">
+		</video>
+	</section> -->
+					
+				</section>
+
+
+
+
+
+
+
+
+<!--
+-----------------------
+Art Education
+
+http://esterknows.com/art-education 
+-----------------------
+-->
+<section>
+	
+	<section data-background="assets/images/arted/yellow.jpg">
+		<h2>Art Education / BFA</h2>
+	</section>
+	
+	<section data-background="assets/images/arted/stapler.jpg">
+		<div class="btm">
+			<p>Art Ed combines art and teaching.</p>
+		</div>
+	</section>
+
+	<section data-background="assets/images/arted/arted.jpg">
+		<p>Train to be an idea-based artist and learn to design instructional strategies.
+		Spend time student-teaching in local schools.</p>
+	</section>
+
+	<section data-background="assets/images/arted/pastels.jpg">
+		<p>Art Education grads become teachers, <br/>school administrators, artists…</p>
+	</section>
+
+</section>
+
+
+
+<!--
+-----------------------
+CommArts
+-----------------------
+-->
+
+
+<section>
+	<section data-background="assets/images/commarts/bunnies.jpg">
+		<h2>Communication Arts / BFA</h2>
+	</section>
+	<section data-background="assets/images/commarts/spins.jpg">
+		<p>Illustration.</p>
+	</section>
+	<section data-background="assets/images/commarts/heart.jpg">
+		<p>Medical Illustration.</p>
+	</section>
+	<section data-background="assets/images/commarts/matrix.jpg">
+		<p>Electronic imaging for print, television, film and web.</p>
+	</section>
+	<section data-background="assets/images/commarts/crows.jpg">
+		<p>The study and exploration of the qualities, disciplines and technologies that enable us to create and communicate with insight, vision and voice.</p>
+	</section>
+
+	<section data-background="assets/images/commarts/gallery.jpg">
+		<p>Communication Arts grads become art directors, illustrators, animators, 3-D modelers, graphic novelists…</p>
+	</section>
+</section>
+
+
+
+<!--
+-----------------------
+Craft
+-----------------------
+-->
+
+
+<section>
+	<section data-background="assets/images/craft/tractor.jpg">
+		<h2>Craft/Material Studies / BFA</h2>
+	</section>
+
+	<section data-background="assets/images/craft/metal1.jpg">
+		<p class="btm">Metal – make objects and jewelry with soldering, stone setting, hollow forming, and enameling techniques</p>
+	</section>
+	<section data-background="assets/images/craft/fiber-armor.jpg">
+		<p class="btm">Fiber – learn to weave, embroider, and knit, <br/>and silkscreen on cloth</p>
+	</section>
+	<section data-background="assets/images/craft/wood3.jpg">
+		<p>Wood – study carving, joinery and lathe work to <br/>make sculpture and furniture</p>
+	</section>
+	<section data-background="assets/images/craft/glass.jpg">
+		<p class="btm">Glass – explore glassblowing, slumping, <br/>lampworking, and casting</p>
+	</section>
+	<section data-background="assets/images/craft/clay2.jpg">
+		<p>Clay – learn hand building or wheel throwing pottery techniques</p>
+	</section>
+
+
+	<section data-background="assets/images/craft/wood-paneling.jpg">
+		<p class="btm">Fiber #1<br/>
+		Glass #1<br/>
+		Metal #5 <br/>
+		Clay #6</p>
+		<p><small>Among all public U.S. art &amp; design programs. <br/><em>US News &amp; World Report</em></small></p>
+	</section>
+
+
+	<section data-background="assets/images/craft/stickhouses.jpg">
+		<p>Craft grads become textile, furniture and jewelry designers, <br/>studio artists, craftspersons…</p>
+	</section>
+</section>
+
+
+<!--
+-----------------------
+Fashion
+-----------------------
+-->
+
+
+<section>
+	<section data-background="assets/images/fashion/fashion.jpg">
+		<h2>Fashion Design / BFA</h2>
+	</section>
+
+	<section data-background="assets/images/fashion/fashion-sewing.jpg">
+		<p>Learn both the creative and professional processes for concept development, fashion illustration, patternmaking, draping and garment construction.</p>
+	</section>
+
+	<section data-background="assets/images/fashion-merchandising/glasses.jpg">
+		<p>Fashion Design grads become fashion designers, product developers, fashion historians, associate designers…</p>
+	</section>
+</section>
+
+
+<!--
+-----------------------
+GDES
+-----------------------
+-->
+
+
+<section>
+	<section data-background="assets/images/gdes/clutter.jpg">
+		<h2>Graphic Design / BFA</h2>
+	</section>
+
+	<section data-background="assets/images/gdes/gdes2.jpg">
+		<p><span class="vcuarts"><span class="vcu">VCU</span><span class="arts">arts</span></span> Graphic Design is ranked #1 
+			<br/>among all public U.S. art &amp; design programs. 
+			<br/>
+			<small>US News &amp; World Report</small>
+		</p>
+	</section>
+	<section data-background="assets/images/gdes/hare.jpg">
+		<p>Graphic designers integrate form and information for the purpose of effective visual communication. Print. Web. Anyplace else where ideas are communicated.</p>
+	</section>
+	<section data-background="assets/images/gdes/bluetype.jpg">
+		<p>Graphic Design grads become creative directors, art directors, graphic designers, web designers…</p>
+	</section>
+</section>
+
+
+
+
+<!--
+-----------------------
+Interior Design
+-----------------------
+-->
+
+
+<section>
+	<section data-background="assets/images/ides/perspective2.png">
+		<h2>Interior Design / BFA</h2>
+	</section>
+
+	<section data-background="assets/images/ides/wax.jpg">
+		<p>Problem solving for the near built environment. It’s not about merely making a room look good.</p>
+	</section>
+
+	<section data-background="assets/images/ides/rab.jpg">
+		<p>Interior Design grads become contract designers, hospitality designers, retail designers, residential designers, space planners…</p>
+	</section>
+</section>
+
+
+<!--
+-----------------------
+KI
+-----------------------
+-->
+
+<section >
+	<section data-background="assets/images/ki/ki.jpg">
+		<h2>Kinetic Imaging / BFA</h2>
+	</section>
+
+	<section data-background="assets/images/ki/pink.jpg">
+		<p>For students with vivid imaginations and inexhaustible curiosity, attracted to video, sound or animation art.</p>
+	</section>
+
+<!-- http://esterknows.com/kinetic-imaging -->
+
+	<section data-background="assets/images/ki/tvs.jpg">
+		<p>Kinetic Imaging grads become media artists, producers, motion graphic artists, animators, video editors, web designers, game artists, film makers, sound technicians…</p>
+	</section>
+</section>
+
+
+<!--
+-----------------------
+Painting + Printmaking
+-----------------------
+-->
+
+
+<section>
+	<section data-background="assets/images/painting/painting.jpg">
+		<h2>Painting + Printmaking / BFA</h2>
+	</section>
+
+<section data-background="assets/images/painting/bottles.jpg">
+	<p><span class="vcuarts"><span class="vcu">VCU</span><span class="arts">arts</span></span> Painting is ranked #2 among all public U.S. art programs. Printmaking is ranked #9. US News &amp; World Report</p>
+</section>
+<section data-background="assets/images/painting/brushes.jpg">
+	<p class="btm">Practice and theory as a foundation for independent exploration and artistic development.</p>
+</section>
+<section data-background="assets/images/painting/light.jpg">
+	<p>Exceptional, sun-filled facilities and enhanced computer lab</p>
+</section>
+<!-- http://esterknows.com/painting-printmaking -->
+	<section data-background="assets/images/painting/diamond.jpg">
+		<p>Painting and Printmaking grads become artists, printmakers, painters, museum administrators, art critics…</p>
+	</section>
+</section>
+
+
+
+<!--
+-----------------------
+Photography + Film
+-----------------------
+-->
+
+
+<section>
+	<section data-background="assets/images/photofilm/photofilm2.jpg">
+		<h2>Photography + Film / BFA</h2>
+	</section>
+
+	<section data-background="assets/images/photofilm/photofilm3.jpg">
+		<p><span class="vcuarts"><span class="vcu">VCU</span><span class="arts">arts</span></span> Photography is ranked #4 among all public U.S. art &amp; design programs. US News &amp; World Report</p>
+	</section>
+
+	<section data-background="assets/images/photofilm/truck.jpg">
+		<p>Students may focus on still photography, filmmaking, or both. </p>
+	</section>
+
+	<section data-background="assets/images/photofilm/subway.jpg">
+		<p>Study traditional and contemporary photographic and film media.</p>
+	</section>
+
+	<section data-background="assets/images/photofilm/happy2.jpg">
+		<p>Photography + Film grads become photographers, <br/>film editors, filmmakers…</p>
+	</section>
+</section>
+
+
+
+<!--
+-----------------------
+Sculpture + Extended Media
+-----------------------
+-->
+
+
+<section>
+	<section data-background="assets/images/sculpture/sculpture.jpg">
+		<h2>Sculpture +<br/>Extended Media / BFA</h2>
+	</section>
+
+	<section data-background="assets/images/sculpture/spaceandlights.jpg">
+		<p><span class="vcuarts"><span class="vcu">VCU</span><span class="arts">arts</span></span> Sculpture is ranked #1 among all public and U.S. art &amp; design programs. US News &amp; World Report</p>
+	</section>
+	<section data-background="assets/images/sculpture/allstars.jpg">
+		<p>One of the largest and most widely recognized programs <br/>in the country.</p>
+	</section>
+	<section data-background="assets/images/sculpture/fire.jpg">
+		<p>Learn construction methods and techniques and how to communicate ideas through artworks.</p>
+	</section>
+	<section data-background="assets/images/sculpture/massage.jpg">
+		<p>"Extended Media" includes video, performance, robotic, <br/>sound, and more.</p>
+	</section>
+
+<!-- http://esterknows.com/sculpture-extended-media -->
+	<section data-background="assets/images/sculpture/shoes2.jpg">
+		<p>Sculpture grads become art educators, sculptors, museum and gallery owners, designers…</p>
+	</section>
+</section>
+
+
+
+<!--
+-----------------------
+Art History
+-----------------------
+-->
+
+<section>
+	<section data-background="assets/images/arthistory/peru.jpg">
+		<h2>Art History / BA</h2>
+	</section>
+
+	<section data-background="assets/images/arthistory/vmfa.jpg">
+		<p>Students study two- and three-dimensional works of art in a variety of media, including painting, photography, sculpture, architecture, film and performance art.</p>
+	</section>
+
+	<section data-background="assets/images/arthistory/camel.jpg">
+		<p>Internships at major museums, galleries, historic buildings and archeological sites.
+Students have traveled to Peru, Scotland, Tibet, Ecuador, and Spain.</p>
+	</section>
+
+	<section data-background="assets/images/arthistory/vmfa2.jpg">
+		<p>Art historians examine the creation and meaning works of art as well as their social, political, and historical contexts.</p>
+	</section>
+	
+	<section data-background="assets/images/arthistory/gloves.jpg">
+		<p>Art History grads become museum curators, conservationists, researchers, gallery administrators, restoration specialists, appraisers, art consultants…</p>
+	</section>
+</section>
+
+
+<!--
+-----------------------
+Cinema
+-----------------------
+-->
+
+
+<section>
+	<section data-background="assets/images/cinema/camera.jpg">
+		<h2>Cinema / BA</h2>
+	</section>
+
+	<section data-background="assets/images/cinema/windshield.jpg">
+		<p>What’s the difference between a BA in Cinema and a BFA in Photography and Film?</p>
+	</section>
+
+	<section data-background="assets/images/cinema/kiss.jpg">
+		<p>Cinema offers a BA degree. Students learn to create narrative films and work in teams. Emphasis on writing, casting, directing, camera work and editing in the collaborative, industry <br/>model of production.</p>
+		<br/>
+		<p class="fragment">Photography and Film offers a BFA degree. Students work individually and in small groups to create artisanal narrative shorts, documentaries and single-channel experimental <br/>films and videos.</p>
+	</section>
+
+	<section data-background="assets/images/cinema/truck.jpg">
+		<p>Focus on narrative film and combine the use of <br/>new digital technologies</p>
+	</section>
+
+	<section data-background="assets/images/cinema/field.jpg">
+		<p>Cinema grads become film makers, directors, editors, producers, critics, sound designers, directors of photography, <br/>production designers…</p>
+	</section>
+</section>
+
+
+
+<!--
+-----------------------
+Fashion Merchandising
+-----------------------
+-->
+<section data-background="assets/images/fashion-merchandising/modelinrva.jpg">
+	<section>
+		<h2>Fashion Merchandising / BA</h2>
+	</section>
+
+	<section data-background="assets/images/fashion-merchandising/heads.jpg"> 
+		<p>Knowing how to have the right merchandise at the right time at the right place and price with the right sales promotion</p>
+	</section>
+
+	<section data-background="assets/images/fashion-merchandising/zipper.jpg">
+		<p>Fashion Merchandising grads become retail buyers, fashion directors, fashion forecasters, fashion historians, <br/>visual merchandisers...</p>
+	</section>
+</section>
+
+
+
+
+
+
+<!--
+-----------------------
+DANCE
+-----------------------
+-->
+
+
+<section>
+	<section data-background="assets/images/dance/curve.jpg">
+		<h2>Dance + Choreography / BFA</h2>
+	</section>
+
+	<section data-background="assets/images/dance/orange.jpg">
+		<p>Equal focus on performance and choreography.</p>
+	</section>
+	<section data-background="assets/images/dance/float.jpg">
+		<p>Students train in modern dance and ballet techniques as well as in creative-track courses.</p>
+	</section>
+	<section data-background="assets/images/dance/hotcold.jpg">
+		<p>VCU Dance is represented annually at major dance competitions.</p>
+	</section>
+	<section data-background="assets/images/dance/tilt.jpg">
+		<p>Dance grads become choreographers, performers, dance teachers, artistic directors, dance therapists…</p>
+	</section>
+</section>
+
+
+
+
+<!--
+-----------------------
+MUSIC
+-----------------------
+-->
+
+
+<section>
+	<section data-background="assets/images/music/drums2.jpg">		
+		<h2>Music / BA, BM</h2>
+	</section>
+
+	<section data-background="assets/images/music/piano-horn3.jpg">
+		<p>Students study in one of these areas:</p>
+	</section>
+	<section data-background="assets/images/music/piano-horn3.jpg">
+		<p>Performance</p>
+		<p>Guitar, Percussion, Piano, Strings, Vocal, Woodwind, or Brass emphasis, Jazz Studies</p>
+		<p>Students have the chance to perform and study with musicians around the world</p>
+	</section>
+	<section data-background="assets/images/music/piano-horn3.jpg">
+		<p>Music Education</p>
+		<p>Teachers perform regularly and are leaders in the fields of music performance and music education.</p>
+	</section>
+	<section data-background="assets/images/music/spot.jpg">
+		<p>Music grads become solo and orchestral performers, music educators, opera singers, music managers, band directors, conductors, professors…</p>
+	</section>
+</section>
+
+
+
+<!--
+-----------------------
+Theatre
+-----------------------
+-->
+
+
+<section>
+	<section data-background="assets/images/theatre/q.jpg">
+		<h2>Theatre / BFA, BA</h2>
+	</section>
+	<section data-background="assets/images/theatre/smiles.jpg">
+			<p>Performance</p>
+	</section>
+
+	<section data-background="assets/images/theatre/grease.jpg">
+		<p>Costume Design</p>	
+	</section>
+		
+	<section data-background="assets/images/misc/students2.jpg">
+		<p>Scenic Design</p> 	
+	</section>
+
+	<section data-background="assets/images/theatre/nicelights.jpg">
+		<p>Lighting Design</p>
+	</section>
+
+	<section data-background="assets/images/theatre/station.jpg">
+		<p>Stage Management</p>
+	</section>
+	
+	<section data-background="assets/images/theatre/hooray.jpg">
+		<p>Theatre grads become actors, voice over artists,<br/> set, costume, light and special effects designers,<br/> fight choreographers, stunt artists, producers, stage managers…</p>
+	</section>
+</section>
+
+
+
+
+
+
+
+
+
+<!--
+-----------------------
+Back to other stuff again
+-----------------------
+-->
+<section>
+	<section data-background="assets/images/misc/latticechair.jpg">
+		<h2>your major is just part of your experience.</h2>
+	</section>
+</section>
+
+
+
+
+
+
+
+<section>
+	<section data-background="assets/images/ugrg.jpg">
+		<h2>Research grants</h2>
+	</section>
+
+	<section data-background="assets/images/misc/yellowhouse.jpg">
+		<h2>The Yellow House</h2>
+		<p>
+		Kay Milne, Art Education<br/>
+		Gerry Perez, Art Education<br/>
+		Warren A. Hamilton II, Kinetic Imaging<br/>
+		Dennis Williams, Theatre and Art History<br/>
+		Rebecca Rudolph, Theatre (Scene Design)<br/>
+		Brian Glass, Kinetic Imaging and Computer Science<br/>
+		Emily Rosko, Theatre (Stage Management)
+		<p>
+
+		<h4>Award: $2,500</h4>
+	</section>
+
+	<section data-background="assets/images/misc/dragon.jpg">
+		<h2>World of Wearable Art</h2>
+		<p>
+			Grace D. Johnston, Sculpture + Extended Media<br/>
+			Melanie J. Hearn, Fashion Design
+		</p>
+		<h4>Award: $3,000</h4>
+	</section>
+
+	<section data-background="assets/images/misc/artadvo2.jpg">
+		<h2>Multimedia Art Advocacy</h2>
+		<p>
+			Kevin Estes, Music Performance; <br/>
+			Peter Soroka, Music Performance; <br/>
+			Brittany Shade, Sculpture + Extended Media; <br/>
+			John Labra, Graphic Design
+		</p>
+		<h4>Award: $2,500</h4>
+	</section>
+
+</section>
+
+<section>
+	<section data-background="assets/images/qatar.jpg">
+		<h2>Travel</h2>
+	</section>
+	<section data-background="assets/images/misc/japan.jpg">	
+		<h2>Dean's International <br/>Study Grants</h2>	
+	</section>
+	<section data-background="assets/images/misc/doha2.jpg">
+		<h2>VCUarts Qatar</h2>
+		<p>Graphic Design</p>
+		<p>Interior Design</p>
+		<p>Fashion Design</p>
+		<p>Painting and Printmaking</p>
+		<p>Art History</p>
+	</section>
+
+	<section data-background="assets/images/misc/pichu.jpg">
+		<h2>VCU Faculty-led programs</h2>
+	</section>
+</section>
+
+<section>
+	<section data-background="assets/images/misc/honors.jpg">
+		<h2>Honors College</h2>
+		<!-- <p>VCUarts and VCU Honors</p>	-->
+	</section>
+	<section data-background="assets/images/beestone.jpg">
+		<p>Smaller class sizes</p>
+		<p>Priority class registration</p>
+		<p>Access to more scholarship funding</p>
+		<p>Honors Idea Exchange</p>
+		<p>Weekly discussions on pertinent topics</p>
+		<p>Outstanding lecture series</p>
+		<p>Honors undergraduate research program</p>
+		<p>Curriculum based on professors' research interest</p>
+		<p>Special library privileges</p>
+		<p>Honors-only housing</p>
+	</section>
+</section>
+
+	<section>
+		<section data-background="assets/images/misc/davinci.jpg">
+			<h2>da Vinci Center</h2>
+			<p>Collaboration between Arts, Business, Engineering <br/>and Humanities &amp; Sciences</p>
+		</section>
+
+		<section data-background="assets/images/misc/cd-lores.jpg">
+			<h2>Center for the Creative Economy</h2>
+		</section>	
+
+		<section data-background="assets/images/misc/google-glass.jpg">
+			<h2>Creative Entrepreneurship</h2>
+		</section>	
+	</section>
+
+
+<section>
+
+	<section data-background="assets/images/misc/mushroomclub.jpg">
+		<h2>Student organizations</h2>
+		<p>VCU has nearly 400 registered student organizations</p>
+	</section>
+
+	<!--<section data-background="assets/images/misc/sports.jpg">-->
+	<!--	<h2>Sports</h2>-->
+
+	<!--	<p>Intramurals and Sports Clubs</p>-->
+	<!--</section>-->
+
+	<section data-background="assets/images/richmond/gym.jpg">
+		<h2>Our gym</h2>
+	</section>
+
+	<section data-background="assets/images/richmond/dining.jpg">
+		<h2>Award winning dining hall</h2>
+	</section>
+
+</section>
+
+<section>
+
+	<section class="nbg" data-background="assets/images/misc/pinkglasses.jpg">
+	</section>
+</section>
+
+
+<!--
+-----------------------
+JOBS
+-----------------------
+-->
+<section>
+	<section data-background="assets/images/searching.jpg">
+		<h2>What about JOBS?</h2>
+	</section>
+
+	<section data-background="assets/images/misc/internship.jpg">
+		<h2>Internships</h2>
+		<p>Local, regional &amp; national organizations tap our talent</p>
+	</section>
+
+
+	<section data-background="assets/images/misc/Jeanette_Hickl.jpg">
+		<h2>VCU Career Services</h2>
+		<p>Arts Career Advisor</p>
+	</section>
+
+
+	<section data-background="assets/images/fashion/professionals.jpg">
+		<h2>Connections</h2>
+		<p>Faculty, students, and advisors connect students with careers</p>
+	</section>
+
+<!-- 	<section data-background="assets/images/misc/alum4.jpg">
+		<h2>34%</h2>
+		<p>of VCUarts students have their first job <br/>BEFORE leaving school.</p>
+	</section>
+
+	<section data-background="assets/images/misc/alum3.jpg">
+		<h2>80%</h2>
+		<p>of VCUarts alumni are employed in a job<br/> related to their field within 12 months.</p>
+	</section>
+
+	<section data-background="assets/images/misc/alum.jpg">
+		<h2>80%</h2> 
+		<p>of VCUarts alumni are satisfied in their careers.</p>
+	</section> -->
+
+
+
+	<section data-background="assets/images/misc/wherearetheynow.jpg">
+		<h2>Where Are They Now?</h2>
+		<p>Find out what our alumni have done with their degrees, upcoming events, news, and more on <a href="arts.vcu.edu/watn" target="_blank">arts.vcu.edu/watn</a></p>
+	</section>
+
+
+
+	<!-- <section data-background="assets/images/alum/tf.jpg">
+		<h3>Teresita Fernández</h3>
+		<p>Contemporary sculptor and artist based in New York</p>
+		<p>Chosen by President Obama for US Commission of Fine Arts</p>
+		<p>2005 MacArthur Genius</p>
+		<p>2003 Guggenheim Fellow</p>
+	</section> 
+
+	<section data-background="assets/images/misc/alum2.jpg">
+		<h3>Jason Butler Harner</h3>
+		<p>Television and Film Actor</p>
+		<p>Alcatraz, The Newsroom, Changeling, Fringe, Law and Order...</p>
+	</section>
+
+	<section data-background="assets/images/alum/donwan.jpg">
+		<h3>Donwan Harrell</h3>
+		<p>Fashion Designer</p>
+		<p>Runs some of the most successful brands in the country including Akademiks, PRPS and aka Stash House.</p>
+	</section>
+
+
+	<section>
+		<h3>You'll make connections.</h3>
+		<video width="946" height="540" controls poster="assets/videos/posters/poster.png">
+		  <source src="assets/videos/04_VCUconnections.mp4" type="video/mp4">
+		</video>
+	</section> -->
+</section>
+
+
+
+<section>
+	<section data-background="assets/images/misc/plane.jpg">
+		<h2>How to apply</h2>
+	</section>
+
+	<section data-background="assets/images/misc/website-new.jpg">
+		<h2>Go to This website</h2>
+		<p><a href="http://arts.vcu.edu" target="_blank">arts.vcu.edu</a></p>
+	</section>
+
+	<section data-background="assets/images/misc/website-new-arrow.jpg">
+		<h2>Push This button</h2>
+	</section>
+
+	<section data-background="assets/images/misc/website-new-arrow.jpg">
+		<h2>By This date</h2>
+		<div class="col-onethird">
+			<p>Nov 15</p>
+			<p><small>scholarship</small></p>
+		</div>
+		<div class="col-onethird">
+			<p>Jan 16</p>
+			<p><small>freshman</small></p>
+		</div>
+		<div class="col-onethird">
+			<p>April 1</p>
+			<p><small>transfer</small></p>
+		<div class="col-onethird">
+	</section>
+
+	<section data-background="assets/images/miscwork/murphy.jpg">
+		<h2>Audition</h2>
+		<p>Dance</p>
+		<p>Music</p>
+		<p>Theatre</p>
+	</section>
+
+	<section data-background="assets/images/miscwork/murphy2.jpg">
+		<h2>Essay</h2>
+		<p>Cinema</p>
+		<p>Art History</p>
+	</section>
+
+	<section data-background="assets/images/miscwork/murphy3.jpg">
+		<h2>Portfolio</h2>
+		<p>Art Foundation</p>
+		<p>Art Education</p>
+		<p>Communication Arts</p>
+		<p>Craft/Material Studies</p>
+		<p>Fashion Design</p>
+		<p>Graphic Design</p>
+		<p>Interior Design</p>
+		<p>Kinetic Imaging</p>
+		<p>Painting + Printmaking</p>
+		<p>Photography + Film</p>
+		<p>Sculpture + Extended Media</p>
+		<p>Theatre Technical Tracks</p>
+	</section>
+
+	<section data-background="assets/images/miscwork/oil.jpg">
+		<h2>Portfolio Requirements</h2>
+		<p>Submit 12 to 16 works of art that you have created within the past two years that show your promise in visual art and design.</p> 
+
+		<p>Present your strongest work and demonstrate your potential to develop a diverse set of skills and ideas.</p> 
+
+		<p>We prefer to see a diverse range of 2D and 3D media. Drawing from observation is recommended.</p>
+
+		<p>You can get <a href="http://arts.vcu.edu/admissions/events-in-your-area/" target="_blank">feedback</a> on your work before you apply.</p>
+	</section>
+
+
+
+	<section data-background="assets/images/misc/summer-intensive-clarken.jpg">
+			<h2>Summer Intensive</h2>
+			<p>Residency Program for high school students</p>
+			<p>the last three weeks of July</p>
+	</section>
+
+
+
+
+	<section data-background="assets/images/misc/summer-intensive-clarken.jpg">
+		<h2><a style="color:#ffffff" href="backstretch/examples/slideshow.html">Thanks!</a></h2>
+	</section>
+
+
+
+	</div>
+
+<div id="quicklinks" class="quicklinks">
+	<img src="assets/images/graphics/quicklinks.png" />
+	<ul>
+		<li><a href="#/">start</a></li>
+		<li><a href="#/7">vcu</a></li>
+		<li><a href="#/8/1">majors</a></li>
+		<li><a href="#/9">visual</a></li>
+		<li><a href="#/19">ba</a></li>
+		<li><a href="#/22">performance</a></li>
+		<li><a href="#/8/3">afo</a></li>
+		<li><a href="#/26">extras</a></li>
+		<li><a href="#/32">jobs</a></li>
+		<li><a href="#/34/8">summer intensive</a></li>
+		<li><a href="#/33">apply</a></li>
+		<li><a href="backstretch/examples/slideshow.html">slideshow</a></li>
+	</ul>
+</div>
+
+<div class="vcuartslogo">
+	<img src="assets/images/graphics/vcuarts-logo-small.png"/>
+</div>
+
+	
+</div>
+
+	
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script src="lib/js/jquery-1.10.2.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: 1020,
+				height: 800,
+				rollingLinks: false,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+
+
+			// quicklinks Toggle
+
+			$('#quicklinks img').on('click', function(){
+				$('#quicklinks ul').fadeToggle();
+			});
+
+			$('#quicklinks ul li a').on('click', function(){
+				$('#quicklinks ul').fadeToggle();
+			});
+
+		</script>
+
+	</body>
+</html>
