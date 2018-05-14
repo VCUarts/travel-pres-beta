@@ -1,4 +1,4 @@
-# VCUarts Travel Presentation
+# VCUarts Travel Presentation Beta 2
 
 [View Online](http://vcuarts.github.io/travel-pres/)
 
