@@ -14,8 +14,10 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
+<!--go back and minify later -->
+		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="https://use.typekit.net/qnz1zmk.css">
 <!-- -->
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -36,8 +38,8 @@
 
 .vcuartslogo{
 	position: fixed;
-	bottom: 20px;
-	left: 20px;
+	right: 5%;
+	top: 5%;
 	z-index: 1000000;
 }
 
@@ -109,7 +111,7 @@ span.inline-callout{
 }
 
 .reveal {
-	font-family: 'Conv_Archer-Medium-Pro';
+	font-family: aktiv-grotesk-extended, sans-serif;
 }
 
 .reveal .slides>section>section{
@@ -253,11 +255,17 @@ table .row-1{
 
 
 
+/* 2018 Updated Styles */
 
+.new-section {
 
+}
 
-
-
+.test p {
+font-family: aktive-grotesk-extended;
+font-style: normal;
+font-weight: 400;
+}
 
 
 
@@ -285,10 +293,12 @@ table .row-1{
 INTRODUCTION
 ------------------------------
 -->
-
+<div style="test">
+	<p style="font-family: aktiv-grotesk-extended !important;">sdoidsonidsg</p>
+</div>
 
 				<section data-background="assets/images/afo/afo.jpg">
-					<section>
+					<section class ="new-section">
 						<h3 style="color:#febe10">Hello, we're</h3>
 						<h1>Virginia Commonwealth University <br/>School of the Arts.</h1>
 					</section>
@@ -447,7 +457,7 @@ Richmond
 -->
 
 				<section>
-					<section data-background="assets/images/new/13-ica.jpg">
+					<section data-background="assets/images/new/13-ICA.jpg">
 						<h2>VCU Institute for Contemporary Art</h2>
 						<p></p>
 					</section>
@@ -1459,7 +1469,7 @@ JOBS
 </div>
 
 <div class="vcuartslogo">
-	<img src="assets/images/graphics/vcuarts-logo-small.png"/>
+	<img src="assets/images/new/vcuarts_logo_white.png"/>
 </div>
 
 
@@ -1467,7 +1477,8 @@ JOBS
 
 
 		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+		<!-- go back and change to minify js -->
+		<script src="js/reveal.js"></script>
 		<script src="lib/js/jquery-1.10.2.min.js"></script>
 
 		<script>

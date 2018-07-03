@@ -81,7 +81,7 @@ body {
      	 	word-break: break-all;
      		/* Non standard for WebKit */
      		word-break: break-word;
-	
+
 	line-height: 1;
 }
 
@@ -666,8 +666,10 @@ body {
 
 .reveal .slides>section.present,
 .reveal .slides>section>section.present {
-	display: block;
-	z-index: 11;
+	position: absolute;
+	margin-top: 5%;
+	margin-left: -10%;
+	z-index: 999999999;
 	opacity: 1;
 }
 
@@ -675,6 +677,8 @@ body {
 .reveal.center .slides,
 .reveal.center .slides section {
 	min-height: auto !important;
+	margin-top: -100px;
+	margin-left: -30px;
 }
 
 
@@ -1607,5 +1611,3 @@ body {
 .zoomed .reveal .roll span:after {
 	visibility: hidden;
 }
-
-
