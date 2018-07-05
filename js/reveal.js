@@ -913,7 +913,7 @@ var Reveal = (function(){
 			if( typeof dom.slides.style.zoom !== 'undefined' && !navigator.userAgent.match( /(iphone|ipod|ipad|android)/gi ) ) {
 				dom.slides.style.zoom = scale;
 			}
-			// Apply scale transform .as a fallback
+			// Apply scale transform as a fallback
 			else {
 				var transform = 'translate(-50%, -50%) scale('+ scale +') translate(50%, 50%)';
 
@@ -1650,12 +1650,12 @@ var Reveal = (function(){
 	}
 
 	/**
-	 * Updates the background elements to reflect the current
+	 * Updates the background elements to reflect the current 
 	 * slide.
 	 */
 	function updateBackground() {
 
-		// Update the classes of all backgrounds to match the
+		// Update the classes of all backgrounds to match the 
 		// states of their slides (past/present/future)
 		toArray( dom.background.childNodes ).forEach( function( backgroundh, h ) {
 

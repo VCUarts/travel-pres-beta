@@ -14,14 +14,18 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<!--go back and minify later -->
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
-		<link rel="stylesheet" href="https://use.typekit.net/qnz1zmk.css">
-<!-- -->
+
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
+		<!--- 2018 update --->
+
+		<link rel="stylesheet" href="css/new-updates.css">
+		<link rel="stylesheet" href="https://use.typekit.net/qnz1zmk.css">
+
+<!-- local fonts -->
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
@@ -29,8 +33,7 @@
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
-		<![endif] -->
-
+		<![endif]-->
 
 
 <!-- styles to be imported when I move this to the version at VCU -->
@@ -38,8 +41,8 @@
 
 .vcuartslogo{
 	position: fixed;
-	right: 5%;
-	top: 5%;
+	bottom: 20px;
+	left: 20px;
 	z-index: 1000000;
 }
 
@@ -83,9 +86,8 @@ span.inline-callout{
 	color: #00ABC4;
 }
 
-
 .reveal .vcuarts .vcu{
-	text-transform: uppercase;
+	text-transform: none;
 }
 
 .reveal .vcuarts .arts{
@@ -95,8 +97,6 @@ span.inline-callout{
 .reveal .lowercase{
 	text-transform: lowercase;
 }
-
-
 
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, .reveal p {
 	text-shadow: 0px 0px 6px rgba(0, 0, 0, 1.0);
@@ -111,7 +111,7 @@ span.inline-callout{
 }
 
 .reveal {
-	font-family: aktiv-grotesk-extended, sans-serif;
+	font-family: 'Conv_Archer-Medium-Pro';
 }
 
 .reveal .slides>section>section{
@@ -140,7 +140,6 @@ span.inline-callout{
 	float: right;
 }
 
-
 .reveal .col-onethird{
 	width: 29%;
 	float: left;
@@ -151,18 +150,9 @@ span.inline-callout{
 	float: right;
 }
 
-
 .reveal .majors-list small{
 	font-size: .8em;
 }
-
-
-
-
-
-
-
-
 .reveal p{
 	margin: 10px 0;
 }
@@ -204,9 +194,6 @@ table .row-1{
 }
 
 
-
-
-
 /*quicklinks*/
 .quicklinks{
 	position: fixed;
@@ -236,13 +223,6 @@ table .row-1{
 	padding: 0 0 0 0;
 }
 
-
-
-
-
-
-
-
 @font-face {
 	font-family: 'Conv_Archer-Medium-Pro';
 	src: url('assets/fonts/Archer-Medium-Pro.eot');
@@ -251,32 +231,7 @@ table .row-1{
 	font-style: normal;
 }
 
-
-
-
-
-/* 2018 Updated Styles */
-
-.new-section {
-
-}
-
-.test p {
-font-family: aktive-grotesk-extended;
-font-style: normal;
-font-weight: 400;
-}
-
-
-
-
 </style>
-
-
-
-
-
-
 
 	</head>
 
@@ -293,23 +248,25 @@ font-weight: 400;
 INTRODUCTION
 ------------------------------
 -->
-<div style="test">
-	<p style="font-family: aktiv-grotesk-extended !important;">sdoidsonidsg</p>
-</div>
+
+
+				<section data-background="new-images/web-bg.jpg">
+					<section class="slide-update">
+						<h3 class="update-copy">Hello, we're
+							<br/>
+						<span class="new-callout">Virginia Commonwealth University <br/>School of the Arts.</span></h3>
+
+					</section>
+				</section>
 
 				<section data-background="assets/images/afo/afo.jpg">
-					<section class ="new-section">
-						<h3 style="color:#febe10">Hello, we're</h3>
-						<h1>Virginia Commonwealth University <br/>School of the Arts.</h1>
-					</section>
-
-					<section>
+					<section class="center-slide">
 						<img class='no-border' src="assets/images/vcuarts-logo.png"/>
 						<h3 class="fragment no-text-shadow" >Nice to meet you.</h3>
 					</section>
 
 					<section
-						data-background="assets/images/new/1-richmond-city.jpg"
+						data-background="assets/images/rva-night-skyline.jpg"
 						data-background-transition="fade">
 
 						<h2>Located in <br/>Richmond, Virginia</h2>
@@ -317,13 +274,13 @@ INTRODUCTION
 
 					<!-- style="background: rgba(0,0,0,0.2)" -->
 					<section
-						data-background="assets/images/new/2-qatar.jpg"
+						data-background="assets/images/qatar2.jpg"
 						data-background-transition="fade">
 						<h2>Branch campus in Doha, Qatar</h2>
 					</section>
 
 					<section
-						data-background="assets/images/new/3-all-over-world.jpg"
+						data-background="assets/images/vcuarts-sticker-rome.jpg"
 						data-background-transition="fade">
 
 						<h2>Connections all over<br/> the world</h2>
@@ -339,7 +296,7 @@ International Students
 ------------------------------
 -->
 				<section>
-					<section class="nbg" data-background="assets/images/new/3-all-over-world.jpg">
+					<section class="nbg" data-background="assets/images/misc/capsquilt.jpg">
 						<img class="no-border" src="assets/images/graphics/states-countries.png"/>
 					</section>
 				</section>
@@ -351,10 +308,10 @@ International Students
 Rankings
 ------------------------------
 -->
-				<section data-background="assets/images/new/4-1-ranked.jpg">
-					<section>
-						<h2><span class="vcuarts"><span class="vcu">VCU</span><span class="arts">arts</span></span> is the <span class="big-callout">#1</span> ranked public art and design program in the country.</h2>
-						<p>So says <em>US News &amp; World Report</em> (since 2003)</p>
+				<section data-background="assets/images/richmond/dogsandducks.png">
+					<section class="slide-update">
+						<h3 class="update-copy">VCU is the #1 ranked public art and design program in the country.
+						So says <em>US News &amp; World Report</em> (since 2003)</h3>
 					</section>
 
 					<section>
@@ -382,7 +339,7 @@ Rankings
 
 					</section>
 
-					<section data-background="assets/images/new/5-senior-show.jpg">
+					<section data-background="assets/images/misc/dog.jpg">
 						<h2>But our ranking is <br/> just part of the story.</h2>
 					</section>
 				</section>
@@ -394,20 +351,21 @@ Value
 -->
 
 				<section>
-					<section data-background="assets/images/new/5-senior-show.jpg">
-						<h2><span class="vcuarts"><span class="vcu">VCU</span><span class="arts">arts</span></span> <span class="inline-callout">is an amazing VALUE.</span></h2>
+					<section data-background="assets/images/money2.jpg">
+						<h2><span class="vcuarts"><span class="vcu">VCU</span><span class="arts">arts</span></span> is an amazing VALUE.</h2>
 					</section>
 
-					<section data-background="assets/images/new/6-AFO.jpg">
+					<section data-background="assets/images/money2.jpg" class="slide-update">
 						<p>Our relatively <span class="inline-callout">low tuition</span></p>
 						<p class="fragment">and <span class="inline-callout">financial aid assistance</span></p>
 
 
-						<p class="fragment">combined with the <span class="inline-callout">reputation and ranking</span> of a <span class="vcuarts"><span class="vcu">VCU</span><span class="arts">arts</span></span> education</p>
+						<p class="fragment">combined with the <span class="inline-callout">quality</span> of a <span class="vcuarts"><span class="vcu">VCU</span><span class="arts">arts</span></span> education <br/> and the <span class="inline-callout">reputation</span> and <span class="inline-callout">ranking</span> of <span class="vcuarts"><span class="vcu">VCU</span><span class="arts">arts</span></span> </p>
+
 						<h2 class="fragment">=</h2>
 					</section>
 
-					<section class="nbg" data-background="assets/images/new/7-commencement.jpg">
+					<section class="nbg" data-background="assets/images/richmond/dunk.jpg">
 						<h2>awesome.</h2>
 						<p class="fragment"><span class="inline-callout">(value)</span></p>
 					</section>
@@ -421,29 +379,29 @@ Richmond
 -->
 
 				<section>
-					<section data-background="assets/images/new/8-rva-river.jpg">
-						<h2>Richmond is an <br/>incredible city with a <br/><span class="inline-callout">low cost-of-living.</span></h2>
+					<section data-background="assets/images/richmond/rva-night.jpg">
+						<h2>Richmond is an <br/>incredible city with a <br/>low cost-of-living.</h2>
 					</section>
 
-					<section data-background="assets/images/new/8-rva-river.jpg">
+					<section data-background="assets/images/richmond/rva-night.jpg">
 						<h2>it is...</h2>
 					</section>
 
-					<section data-background="assets/images/new/9-rva-rowhouses.jpg">
+					<section data-background="assets/images/fall.jpg">
 						<h2>Beautiful.</h2>
 					</section>
 
-					<section data-background="assets/images/new/10-street-mural.jpg">
+					<section data-background="assets/images/pollak-roof.jpg">
 						<h2>Inspiring.</h2>
 					</section>
 
-					<section data-background="assets/images/new/11-VMFA.jpg">
+					<section data-background="assets/images/vmfa_exterior.jpg">
 						<h2>Arts-centric.</h2>
 					</section>
 
 
-					<section data-background="assets/images/new/12-art-gallery.jpg">
-						<h2>There's always something cool to do and see.</h2>
+					<section data-background="assets/images/carytown-vintage.jpg">
+						<h2>There's Always something cool to do and see.</h2>
 					</section>
 				</section>
 
@@ -457,7 +415,7 @@ Richmond
 -->
 
 				<section>
-					<section data-background="assets/images/new/13-ICA.jpg">
+					<section data-background="assets/images/misc/ica.jpg">
 						<h2>VCU Institute for Contemporary Art</h2>
 						<p></p>
 					</section>
@@ -475,20 +433,20 @@ Did You Know?
 						<h2>Richmond is...</h2>
 					</section>
 
-					<section data-background="assets/images/new/14-rapids.jpg">
-						<h2>Outdoor Magazine's <br/><span class="inline-callout">#1 River City</span></h2>
+					<section data-background="assets/images/richmond/rivercityraft.com/rapids2.jpg">
+						<h2>Outdoor Magazine's <br/>#1 River City</h2>
 					</section>
 
-					<section data-background="assets/images/new/15-tattoo.jpg">
+					<section data-background="assets/images/richmond/rva-tattoo.jpg">
 						<h2>the Third most tattooed <br/>city in the U.S.</h2>
 					</section>
 
-					<section data-background="assets/images/new/16-rva-cbb.jpg">
-						<h2>One of the world's top six destinations for food travel</h2>
-						<p>According to National Geographic (2016)</p>
+					<section data-background="assets/images/richmond/apples2.jpg">
+						<h2>One of 8 under the radar foodie cities in the world</h2>
+						<p>As ranked by U.S. News Travel</p>
 					</section>
 
-					<section data-background="assets/images/new/17-rva-skyline.jpg">
+					<section data-background="assets/images/richmond/rvamoon.jpg">
 						<h2>One of 10 best cities for finding employment</h2>
 						<p>According to Forbes</p>
 					</section>
@@ -513,31 +471,31 @@ Back to VCU
 
 				<section>
 					<!-- <section data-background="assets/images/glassworking_1.jpg"> -->
-					<section data-background="assets/images/new/18-study-space.jpg">
+					<section data-background="assets/images/richmond/engbldg.jpg">
 						<h2>VCU is a major public research institution</h2>
 					</section>
 
-					<section class="biglist" data-background="assets/images/new/18-study-space.jpg">
+					<section class="biglist" data-background="assets/images/misc/doors.jpg">
 						<small>Accounting | African American Studies | Anthropology | <span class="inline-callout">Art Education</span> | <span class="inline-callout">Art History</span> | Bioinformatics | Biology | Biomedical Engineering | Business | Chemical and Life Science Engineering | Chemistry | <span class="inline-callout">Cinema</span> | Clinical Laboratory Sciences | Clinical Radiation Sciences | <span class="inline-callout">Communication Arts</span> | Computer Engineering | Computer Science | <span class="inline-callout">Craft/Material Studies</span> | Criminal Justice | <span class="inline-callout">Dance and Choreography</span> | Dental Hygiene | Early and Elementary Education | Economics | Electrical Engineering | English | Environmental Studies | <span class="inline-callout">Fashion Design</span> | <span class="inline-callout">Fashion Merchandising</span> | Financial Technology | Foreign Language | Forensic Science | Gender, Sexuality and Women’s Studies | <span class="inline-callout">Graphic Design</span> | Health, Physical Education and Exercise Science | History | Homeland Security and Emergency Preparedness | Information Systems | Interdisciplinary Studies | <span class="inline-callout">Interior Design</span> | International Studies | <span class="inline-callout">Kinetic Imaging</span> | Marketing | Mass Communications | Mathematical Sciences | Mechanical Engineering | <span class="inline-callout">Music</span> | Nursing | <span class="inline-callout">Painting + Printmaking</span> | Philosophy | <span class="inline-callout">Photography + Film</span> | Physics | Political Science | Psychology | Real Estate | Religious Studies | Science | <span class="inline-callout">Sculpture + Extended Media</span> | Social Work | Sociology | <span class="inline-callout">Theatre</span> | Urban and Regional Studies</small>
 					</section>
 
-					<section class="nbg" data-background="assets/images/new/19-students-outdoor.jpg">
+					<section class="nbg" data-background="assets/images/richmond/vcu-rams-crowd.jpg">
 						<img class="no-border" src="assets/images/graphics/vcu-pop.png" />
 					</section>
 
-					<section class="nbg" data-background="assets/images/new/20-fashion.jpg">
+					<section class="nbg" data-background="assets/images/npd.jpg">
 						<img class="no-border" src="assets/images/graphics/vcuarts-pop.png" />
 					</section>
 
-					<section class="nbg" data-background="assets/images/new/21-music.jpg">
+					<section class="nbg" data-background="assets/images/richmond/gdes-dept.jpg">
 						<img class="no-border" src="assets/images/graphics/vcuarts-dep.png" />
 					</section>
 
-					<section class="nbg" data-background="assets/images/new/22-classroom.jpg">
+					<section class="nbg" data-background="assets/images/richmond/vcuarts-class-2.jpg">
 						<img class="no-border" src="assets/images/graphics/vcuarts-class.png" />
 					</section>
 
-					<section class="nbg" data-background="assets/images/new/23-library-courtyard.jpg">
+					<section class="nbg" data-background="assets/images/bigops.png">
 						<img class="no-border" src="assets/images/graphics/big-small.png" />
 					</section>
 
@@ -1065,7 +1023,6 @@ MUSIC
 -->
 
 
-
 <section>
 	<section data-background="assets/images/music/drums2.jpg">
 		<h2>Music / BA, BM</h2>
@@ -1469,7 +1426,7 @@ JOBS
 </div>
 
 <div class="vcuartslogo">
-	<img src="assets/images/new/vcuarts_logo_white.png"/>
+	<img src="assets/images/graphics/vcuarts-logo-small.png"/>
 </div>
 
 
@@ -1477,8 +1434,7 @@ JOBS
 
 
 		<script src="lib/js/head.min.js"></script>
-		<!-- go back and change to minify js -->
-		<script src="js/reveal.js"></script>
+		<script src="js/reveal.min.js"></script>
 		<script src="lib/js/jquery-1.10.2.min.js"></script>
 
 		<script>
