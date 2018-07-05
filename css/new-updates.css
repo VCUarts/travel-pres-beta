@@ -12,13 +12,13 @@
   text-shadow: none !important;
   color: #000 !important;
   font-size: 40px !important;
-  font-weight:100 !important;
+  font-weight: 100 !important;
   text-align: left !important;
   line-height: 60px !important;
 }
 
 .new-callout {
-font-family: arial, sans-serif !important;
+font-family: "aktiv-grotesk",sans-serif !important;
 text-transform: none !important;
 text-shadow: none !important;
 color: #000 !important;
@@ -34,8 +34,29 @@ font-weight: 900 !important;
   background-color: #FFF !important;
   margin-left: 550px !important;
   display: inherit !important;
+  border: none !important;
+  color: #000;
 }
 
+.slide-update p {
+  font-family: "aktiv-grotesk",sans-serif !important;
+  text-transform: none !important;
+  text-shadow: none !important;
+  text-align: left !important;
+  font-size: 26px !important;
+
+}
+
+.slide-update h3 {
+  font-family: "aktiv-grotesk",sans-serif !important;
+  text-transform: none !important;
+  text-shadow: none !important;
+  color: #000 !important;
+  font-size: 40px !important;
+  font-weight: 100 !important;
+  text-align: left !important;
+  line-height: 60px !important;
+}
 .reveal .slides>section>section {
   border-radius: 0px !important;
   box-shadow: 0px 0px 0px 0px !important;
