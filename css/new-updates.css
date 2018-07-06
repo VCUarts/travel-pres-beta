@@ -1,21 +1,50 @@
+/**Typekit font import **/
+
 @font-face {
  font-family: "aktiv-grotesk";
  src: url("fonts/AktivGrotesk_Bd.ttf");
  }
 
-.reveal h3 {
-}
+/**Global fix to override reveal.css **/
+ .reveal .slides>section>section {
+   border-radius: 0px !important;
+   box-shadow: 0px 0px 0px 0px !important;
+ }
 
-.update-copy {
-  font-family: "aktiv-grotesk",sans-serif !important;
-  text-transform: none !important;
-  text-shadow: none !important;
-  color: #000 !important;
-  font-size: 40px !important;
-  font-weight: 100 !important;
-  text-align: left !important;
-  line-height: 60px !important;
-}
+
+/** Most used style override, makes background white, fixes font, left-justifies text and aligns content area to the left instead of centering it **/
+
+ .slide-update {
+   background-color: #FFF !important;
+   top: 40px !important;
+   left: -10px !important;
+   margin-left: 550px !important;
+   display: inherit !important;
+   border: none !important;
+   color: #000;
+ }
+
+ .slide-update p {
+   font-family: "aktiv-grotesk",sans-serif !important;
+   text-transform: none !important;
+   text-shadow: none !important;
+   text-align: left !important;
+   font-size: 26px !important;
+
+ }
+
+ .slide-update h3 {
+   font-family: "aktiv-grotesk",sans-serif !important;
+   text-transform: none !important;
+   text-shadow: none !important;
+   color: #000 !important;
+   font-size: 40px !important;
+   font-weight: 100 !important;
+   text-align: left !important;
+   line-height: 60px !important;
+ }
+
+/** call out text -- mostly makes text bold and bigger ***/
 
 .new-callout {
 font-family: "aktiv-grotesk",sans-serif !important;
@@ -26,48 +55,78 @@ font-size: 45px !important;
 font-weight: 900 !important;
 }
 
-.slide-update {
+/** styles for inverted text **/
+
+.slide-invert {
+  background-color: transparent !important;
+  margin-left: 550px !important;
+  font-weight: 900 !important;
   top: 40px !important;
   left: -10px !important;
-}
-.slide-update {
-  background-color: #FFF !important;
-  margin-left: 550px !important;
   display: inherit !important;
   border: none !important;
-  color: #000;
+  color: #FFF;
 }
 
-.slide-update p {
+.slide-invert h2 {
   font-family: "aktiv-grotesk",sans-serif !important;
-  text-transform: none !important;
+  text-transform: uppercase !important;
   text-shadow: none !important;
-  text-align: left !important;
-  font-size: 26px !important;
-
-}
-
-.slide-update h3 {
-  font-family: "aktiv-grotesk",sans-serif !important;
-  text-transform: none !important;
-  text-shadow: none !important;
-  color: #000 !important;
-  font-size: 40px !important;
+  color: #FFF !important;
+  font-size: 150px !important;
   font-weight: 100 !important;
   text-align: left !important;
   line-height: 60px !important;
 }
-.reveal .slides>section>section {
-  border-radius: 0px !important;
-  box-shadow: 0px 0px 0px 0px !important;
+
+.slide-invert h3 {
+  font-family: "aktiv-grotesk",sans-serif !important;
+  text-shadow: none !important;
+  text-transform: none !important;
+  color: #FFF !important;
+  font-size: 50px !important;
+  font-weight: 900 !important;
+  text-align: left !important;
+  line-height: 60px !important;
 }
 
-.center-slide {
-  margin-left: 72% !important;
-  margin-top: 50% !important;
+.slide-invert h6 {
+  font-family: "aktiv-grotesk",sans-serif !important;
+  text-transform: none !important;
+  line-height: 100px !important;
+  text-shadow: none !important;
+  text-align: left !important;
+  font-size: 50px !important;
 }
 
-{
-  top: 100% !important;
-  left: 100% !important;
+.slide-invert p {
+  font-family: "aktiv-grotesk",sans-serif !important;
+  text-transform: none !important;
+  line-height: 35px !important;
+  text-shadow: none !important;
+  text-align: left !important;
+  font-size: 24px !important;
+  font-weight: 100 !important;
+}
+
+/**styles for major list slide **/
+
+.major-list h4 {
+  font-family: "aktiv-grotesk",sans-serif !important;
+  text-transform: capitalize !important;
+  text-shadow: none !important;
+  color: #000 !important;
+  font-size: 30px !important;
+  font-weight: 100 !important;
+  text-align: left !important;
+  line-height: 35px !important;
+}
+
+.major-callout {
+  font-family: "aktiv-grotesk",sans-serif !important;
+  text-transform: none !important;
+  text-shadow: none !important;
+  color: #000 !important;
+  font-size: 32px !important;
+  font-weight: 900 !important;
 }
