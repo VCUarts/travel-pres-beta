@@ -70,7 +70,8 @@ font-weight: 900 !important;
 /** styles for inverted text **/
 
 .slide-invert {
-  background-color: transparent !important;
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  opacity: 0.9;
   margin-left: 550px !important;
   font-weight: 900 !important;
   top: 40px !important;
@@ -125,7 +126,7 @@ font-weight: 900 !important;
 
 .major-list h4 {
   font-family: "aktiv-grotesk",sans-serif !important;
-  text-transform: capitalize !important;
+  text-transform: none !important;
   text-shadow: none !important;
   color: #000 !important;
   font-size: 30px !important;
