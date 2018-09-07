@@ -1,6 +1,6 @@
 # VCUarts Travel Presentation
 
-[View Online](http://vcuarts.github.io/travel-pres/)
+[View Online](http://arts.vcu.edu/presentation)
 
 Built with reveal.js [![Build Status](https://travis-ci.org/hakimel/reveal.js.png?branch=master)](https://travis-ci.org/hakimel/reveal.js)
 
